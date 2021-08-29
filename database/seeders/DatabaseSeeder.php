@@ -32,6 +32,35 @@ class DatabaseSeeder extends Seeder
             'tag' => 'cosmetics',
 
         ],
+            [
+                'id' => 8,
+                'brand_id' => 1,
+                'product_category_id' => 1,
+                'name' => 'Sữa tắm Tokyo',
+                'description' => null,
+                'content' => null,
+                'price' => 125.000,
+                'qty' => 112,
+                'discount' => 12,
+                'featured' => true,
+                'tag' => 'cosmetics',
+
+            ],
+            [
+                'id' => 9,
+                'brand_id' => 1,
+                'product_category_id' => 1,
+                'name' => 'Sữa tắm Tokyo',
+                'description' => null,
+                'content' => null,
+                'price' => 125.000,
+                'qty' => 112,
+                'discount' => 12,
+                'featured' => true,
+                'tag' => 'cosmetics',
+
+            ],
+
 
         [
             'id' => 2,
@@ -238,84 +267,64 @@ class DatabaseSeeder extends Seeder
 
         DB::table('product_images')->insert([
             [
-                'product_id' => 1, 'path' => 'product-1.jpg',
+                'product_id' => 1, 'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-4.jpg',
             ],
             [
                 'product_id' => 1,
-                'path' => 'product-1-1.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-4.jpg',
             ],
             [
                 'product_id' => 1,
-                'path' => 'product-1-2.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-4.jpg',
             ],
             [
                 'product_id' => 2,
-                'path' => 'product-2.jpg',
+                'path' => '	https://pro-theme.com/html/viasun/assets/img/img-product-6.jpg',
             ],
             [
                 'product_id' => 3,
-                'path' => 'product-3.jpg',
+                'path' => '	https://pro-theme.com/html/viasun/assets/img/img-product-6.jpg',
             ],
             [
                 'product_id' => 4,
-                'path' => 'product-4.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-6.jpg',
             ],
-            [
-                'product_id' => 5,
-                'path' => 'product-5.jpg',
-            ],
-            [
-                'product_id' => 6,
-                'path' => 'product-6.jpg',
-            ],
-            [
-                'product_id' => 7,
-                'path' => 'product-7.jpg',
-            ],
-            [
-                'product_id' => 8,
-                'path' => 'product-8.jpg',
-            ],
-            [
-                'product_id' => 9,
-                'path' => 'product-9.jpg',
-            ],
+
         ]);
 
         DB::table('product_details')->insert([
             [
                 'product_id' => 1,
-                'color' => 'blue',
                 'size' => 'S',
                 'qty' => 5,
             ],
             [
                 'product_id' => 1,
-                'color' => 'blue',
+
                 'size' => 'M',
                 'qty' => 5,
             ],
             [
                 'product_id' => 1,
-                'color' => 'blue',
+
                 'size' => 'L',
                 'qty' => 5,
             ],
             [
                 'product_id' => 1,
-                'color' => 'blue',
+
                 'size' => 'XS',
                 'qty' => 5,
             ],
             [
                 'product_id' => 1,
-                'color' => 'yellow',
+
                 'size' => 'S',
                 'qty' => 0,
             ],
             [
                 'product_id' => 1,
-                'color' => 'violet',
+
                 'size' => 'S',
                 'qty' => 0,
             ],

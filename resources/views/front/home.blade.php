@@ -90,13 +90,14 @@
                             <h3>Shop New Arrivals</h3>
                         </div>
                         <div class="section-content">
-
-                               @foreach($cleansers as $cleanser)
                             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid data-uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-small; delay: 300">
-                                <div>
+                                        @foreach( $cleansers as $cleanser)
                                     <div class="product-card">
                                         <div class="product-card__box">
-                                            <div class="product-card__media"> <img class="product-card__img" src="public/frontend/img/products{{$cleanser->productImages[0]->path}}" alt="V-Beauty Pack" />
+                                            <div class="product-card__media"> <img class="product-card__img" src="{{ $cleanser->productImages[0]->path }}" alt="V-Beauty Pack" />
+                                                @if($cleanser->discount !=null)
+                                                    <div class="sale">sale</div>
+                                                @endif
                                                 <div class="product-card__btns">
                                                     <ul>
                                                         <li><a href="#"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
@@ -117,10 +118,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
 
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
