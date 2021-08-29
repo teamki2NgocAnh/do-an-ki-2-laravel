@@ -31,4 +31,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home',[App\Http\Controllers\Front\shopController::class, 'home']);
+// ĐÂY LÀ LỚP CONTROLLER KO PHẢI QUA LỚP FRONT.ĐƯỜNG LINK
+Route::get('/home',[App\Http\Controllers\Controller::class, 'home']);
+
