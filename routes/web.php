@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 
 Route::get('/home',[App\Http\Controllers\Front\shopController::class, 'home']);
+
+Route::get('/shop',[App\Http\Controllers\Front\shopController::class, 'shop']);
