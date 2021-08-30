@@ -17,7 +17,8 @@ class ProductImagesSeeder extends Seeder
     {
         DB::table('product_images')->insert([
             [
-                'product_id' => 1, 'path' => 'img-product-1.jpg',
+                'product_id' => 1,
+                'path' => 'img-product-1.jpg',
             ],
             [
                 'product_id' => 2,
