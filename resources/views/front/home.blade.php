@@ -91,10 +91,10 @@
                         </div>
                         <div class="section-content">
                             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid data-uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-small; delay: 300">
-                                        @foreach( $cleansers as $cleanser)
+                                @for($i=sizeof($cleansers)-1;$i>=0;$i--)
                                     <div class="product-card">
                                         <div class="product-card__box">
-                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/{{$cleanser -> productImages[0]->path }}--}}" alt="V-Beauty Pack"/>
+                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/{{$cleansers[$i]->productImages[0]->path}}--}}" alt="V-Beauty Pack"/>
 {{--                                                public/frontend/img/{{$cleanser -> productImages[0]->path }}--}}
                                                 <div class="product-card__btns">
                                                     <ul>
@@ -105,18 +105,18 @@
                                                 </div>
                                             </div>
                                             <div class="product-card__info">
-                                                <div class="product-card__title"> <a href="03_product.html">{{$cleanser->name}}</a><span>{{$cleanser->tag}}</span></div>
+                                                <div class="product-card__title"> <a href="03_product.html">{{$cleansers[$i]->name}}</a><span>{{$cleansers[$i]->tag}}</span></div>
                                                 <div class="product-card__price">
-                                                    @if($cleanser->discount != null)
-                                                        ${{$cleanser->discount}}
+                                                    @if($cleansers[$i]->discount != null)
+                                                        ${{$cleansers[$i]->discount}}
                                                     @else
-                                                        ${{$cleanser->price}}
+                                                        ${{$cleansers[$i]->price}}
                                                     @endif
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @endfor
 
                             </div>
                         </div>
