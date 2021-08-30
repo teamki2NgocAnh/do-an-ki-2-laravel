@@ -94,8 +94,8 @@
                                         @foreach( $cleansers as $cleanser)
                                     <div class="product-card">
                                         <div class="product-card__box">
-                                            <div class="product-card__media"><img class="product-card__img" src="{{$cleanser -> productImages[0]-> path}}" alt="V-Beauty Pack"/>
-
+                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/{{$cleanser -> productImages[0]->path }}--}}" alt="V-Beauty Pack"/>
+{{--                                                public/frontend/img/{{$cleanser -> productImages[0]->path }}--}}
                                                 <div class="product-card__btns">
                                                     <ul>
                                                         <li><a href="#"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
