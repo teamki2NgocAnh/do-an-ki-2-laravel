@@ -10,6 +10,14 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+
+   
+
+    public function admin_home()
+    {
+        return view('front.admin.users.index');
+    }
+
   public function home(){
       $cleansers = Product::where('featured',true)->where('product_category_id',1)->get();
       $lotions = Product::where('featured',true)->where('product_category_id',2)->get();
