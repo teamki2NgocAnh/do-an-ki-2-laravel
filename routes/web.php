@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('admin')->group(function (){
+    require_once __DIR__ . '/admin.php';
+});
 
 Route::get('/home',[App\Http\Controllers\Front\shopController::class, 'home']);
+

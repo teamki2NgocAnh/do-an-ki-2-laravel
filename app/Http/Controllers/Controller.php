@@ -9,7 +9,13 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-  public function home(){
-      return view('front.home');
-  }
+    public function home()
+    {
+        return view('front.home');
+    }
+
+    public function admin_home()
+    {
+        return view('front.admin.users.index');
+    }
 }
