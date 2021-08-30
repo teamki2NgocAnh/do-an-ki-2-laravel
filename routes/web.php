@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+
+    // kiểm tra file thông tin file seeder
+
+// return \App\Models\User::all();
+
+// return \App\Models\Product::all();
+
+//    return \App\Models\Brand::find(2)->products;
+
+//    return \App\Models\Product::find(1)->brand;
+    return \App\Models\Product::find(1)->productImages;
+
 });
 
 
-Route::get('/home',[App\Http\Controllers\Front\shopController::class, 'home']);
+// ĐÂY LÀ LỚP CONTROLLER KO PHẢI QUA LỚP FRONT.ĐƯỜNG LINK
+Route::get('/home',[App\Http\Controllers\Controller::class, 'home']);
+
