@@ -10,6 +10,11 @@ class ProductImage extends Model
     use HasFactory;
 
     protected $table = 'product_images';
+    // khai báo thuộc tính để truy vấn dữ liệu
+    protected $fillable = [
+        'product_id',
+        'path'
+    ];
     protected $primaryKey = 'id';
     protected $guarded = [];
 
