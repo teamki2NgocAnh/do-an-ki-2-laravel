@@ -18,27 +18,27 @@ class ProductImagesSeeder extends Seeder
         DB::table('product_images')->insert([
             [
                 'product_id' => 1,
-                'path' => 'img-product-1.jpg',
+                'path' => 'product-category-1.png',
             ],
             [
-                'product_id' => 2,
-                'path' => 'img-product-2.jpg',
+                'product_id' => 1,
+                'path' => 'product-category-2.png',
             ],
             [
-                'product_id' => 3,
-                'path' => 'img-product-3.jpg',
+                'product_id' => 1,
+                'path' => 'product-category-3.png',
             ],
             [
                 'product_id' => 4,
-                'path' => 'img-product-4.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-5.jpg',
             ],
             [
                 'product_id' => 5,
-                'path' => 'img-product-5.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-5.jpg',
             ],
             [
                 'product_id' => 6,
-                'path' => 'img-product-6.jpg',
+                'path' => 'https://pro-theme.com/html/viasun/assets/img/img-product-5.jpg',
             ],
 
         ]);
