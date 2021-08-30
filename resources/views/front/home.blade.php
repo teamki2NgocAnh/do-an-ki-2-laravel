@@ -91,11 +91,13 @@
                         </div>
                         <div class="section-content">
                             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid data-uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-small; delay: 300">
-                                @for($i=sizeof($cleansers)-1;$i>=0;$i--)
+
+                                        @foreach( $cosmetics as $cosmetic)
                                     <div class="product-card">
                                         <div class="product-card__box">
-                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/{{$cleansers[$i]->productImages[0]->path}}--}}" alt="V-Beauty Pack"/>
-{{--                                                public/frontend/img/{{$cleanser -> productImages[0]->path }}--}}
+                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/products/{{$cosmetic->path}}" alt="V-Beauty Pack"/>
+{{--                                                public/frontend/img/{{$cosmetic -> productImages[0]->path }}--}}
+
                                                 <div class="product-card__btns">
                                                     <ul>
                                                         <li><a href="#"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
@@ -105,12 +107,12 @@
                                                 </div>
                                             </div>
                                             <div class="product-card__info">
-                                                <div class="product-card__title"> <a href="03_product.html">{{$cleansers[$i]->name}}</a><span>{{$cleansers[$i]->tag}}</span></div>
+
+                                                <div class="product-card__title"> <a href="03_product.html">{{$cosmetic->product->name}}</a><span>{{$cosmetic->product->tag}}</span></div>
                                                 <div class="product-card__price">
-                                                    @if($cleansers[$i]->discount != null)
-                                                        ${{$cleansers[$i]->discount}}
-                                                    @else
-                                                        ${{$cleansers[$i]->price}}
+                                                    @if($cosmetic->product->price != null)
+                                                        ${{$cosmetic->product->price}}
+
                                                     @endif
                                                 </div>
                                             </div>
