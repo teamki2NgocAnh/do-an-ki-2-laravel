@@ -15,7 +15,7 @@ class Controller extends BaseController
       $lotions = Product::where('featured',true)->where('product_category_id',2)->get();
 
    // cách kiểm tra các sp vào database chưa
-//       dd($cleansers );
+       //  dd($cleansers );
 
       return view('front.home',compact('cleansers','lotions'));
   }
