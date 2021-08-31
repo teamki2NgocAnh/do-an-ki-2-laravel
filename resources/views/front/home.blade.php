@@ -107,7 +107,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="product-card__info">
 
                                                 <div class="product-card__title"> <a href="03_product.html">{{$cosmetic->name}}</a><span>{{$cosmetic->tag}}</span></div>
@@ -120,7 +120,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endfor
+                                @endforeach
 
                             </div>
                         </div>
@@ -251,7 +251,7 @@
                                             <div class="news-card">
                                                 <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/{{$blog ->images}}" alt="15 Tips For a Perfect Makup" /></a></div>
                                                 <div class="news-card__body">
-                                                    <div class="news-card__info"> <span class="news-card__category"> {{$blog -> subTitle}} </span><span class="news-card__date">{{date('M d, Y',strtotime($blog->created_at))}}</span></div>
+                                                    <div class="news-card__info"> <span class="news-card__category"> {{$blog -> category}} </span><span class="news-card__date">{{date('M d, Y',strtotime($blog->created_at))}}</span></div>
                                                     <div class="news-card__title"> <a href="05_blog-post.html">{{$blog -> title}} </a></div>
                                                 </div>
                                             </div>

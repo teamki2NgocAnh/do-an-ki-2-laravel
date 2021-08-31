@@ -17,12 +17,11 @@ class CreateBlogsTable extends Migration
             $table->id();
 
             $table->integer('user_id')->unsigned();
-            $table->string('title');
-            $table->string('subTitle');
-            $table->string('images');
-            $table->string('category');
+            $table->text('title');
+            $table->text('category');
+            $table->text('images');
             $table->text('content');
-
+            $table->integer('status');
             $table->timestamps();
         });
     }
