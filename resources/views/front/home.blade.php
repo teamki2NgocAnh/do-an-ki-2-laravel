@@ -91,11 +91,14 @@
                         </div>
                         <div class="section-content">
                             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid data-uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-small; delay: 300">
+
                                         @foreach( $cosmetics as $cosmetic)
                                     <div class="product-card">
                                         <div class="product-card__box">
+
                                             <div class="product-card__media">
                                                         <img class="product-card__img" src="public/frontend/img/products/{{$cosmetic->path}}" alt="V-Beauty Pack"/>
+
                                                 <div class="product-card__btns">
                                                     <ul>
                                                         <li><a href="{{url("/detail", $cosmetic->id)}}"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
@@ -104,17 +107,20 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            
                                             <div class="product-card__info">
+
                                                 <div class="product-card__title"> <a href="03_product.html">{{$cosmetic->name}}</a><span>{{$cosmetic->tag}}</span></div>
                                                 <div class="product-card__price">
                                                     @if($cosmetic->price != null)
                                                         ${{$cosmetic->price}}
+
                                                     @endif
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @endfor
 
                             </div>
                         </div>
