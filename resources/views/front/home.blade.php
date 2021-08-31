@@ -95,23 +95,25 @@
                                         @foreach( $cosmetics as $cosmetic)
                                     <div class="product-card">
                                         <div class="product-card__box">
-                                            <div class="product-card__media"><img class="product-card__img" src="public/frontend/img/products/{{$cosmetic->path}}" alt="V-Beauty Pack"/>
-{{--                                                public/frontend/img/{{$cosmetic -> productImages[0]->path }}--}}
+
+                                            <div class="product-card__media">
+                                                        <img class="product-card__img" src="public/frontend/img/products/{{$cosmetic->path}}" alt="V-Beauty Pack"/>
 
                                                 <div class="product-card__btns">
                                                     <ul>
-                                                        <li><a href="#"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
+                                                        <li><a href="{{url("/detail", $cosmetic->id)}}"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
                                                         <li><a href="#"><span>zoom</span><i class="fas fa-search-plus"></i></a></li>
                                                         <li><a href="#"><span>Add to wishlist</span><i class="fas fa-heart"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
+                                            
                                             <div class="product-card__info">
 
-                                                <div class="product-card__title"> <a href="03_product.html">{{$cosmetic->product->name}}</a><span>{{$cosmetic->product->tag}}</span></div>
+                                                <div class="product-card__title"> <a href="03_product.html">{{$cosmetic->name}}</a><span>{{$cosmetic->tag}}</span></div>
                                                 <div class="product-card__price">
-                                                    @if($cosmetic->product->price != null)
-                                                        ${{$cosmetic->product->price}}
+                                                    @if($cosmetic->price != null)
+                                                        ${{$cosmetic->price}}
 
                                                     @endif
                                                 </div>
@@ -244,42 +246,17 @@
                             <div data-uk-slider>
                                 <div class="uk-position-relative" tabindex="-1">
                                     <ul class="uk-slider-items uk-grid uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l">
+                                        @foreach($blogs as $blog )
                                         <li>
                                             <div class="news-card">
-                                                <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/news-card-1.jpg" alt="15 Tips For a Perfect Makup" /></a></div>
+                                                <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/{{$blog ->images}}" alt="15 Tips For a Perfect Makup" /></a></div>
                                                 <div class="news-card__body">
-                                                    <div class="news-card__info"> <span class="news-card__category"> makeup </span><span class="news-card__date"> 16 jan 2021</span></div>
-                                                    <div class="news-card__title"> <a href="05_blog-post.html">15 Tips For a Perfect Makup </a></div>
+                                                    <div class="news-card__info"> <span class="news-card__category"> {{$blog -> subTitle}} </span><span class="news-card__date">{{date('M d, Y',strtotime($blog->created_at))}}</span></div>
+                                                    <div class="news-card__title"> <a href="05_blog-post.html">{{$blog -> title}} </a></div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li>
-                                            <div class="news-card">
-                                                <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/news-card-2.jpg" alt="How to Maintain a Slim Body" /></a></div>
-                                                <div class="news-card__body">
-                                                    <div class="news-card__info"> <span class="news-card__category"> Fitness </span><span class="news-card__date"> 31 jan 2021</span></div>
-                                                    <div class="news-card__title"> <a href="05_blog-post.html">How to Maintain a Slim Body </a></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="news-card">
-                                                <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/news-card-3.jpg" alt="Attend Any Event With Full Spirit" /></a></div>
-                                                <div class="news-card__body">
-                                                    <div class="news-card__info"> <span class="news-card__category"> health </span><span class="news-card__date"> 25 Feb 2021</span></div>
-                                                    <div class="news-card__title"> <a href="05_blog-post.html">Attend Any Event With Full Spirit </a></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="news-card">
-                                                <div class="news-card__media"> <a href="05_blog-post.html"><img src="public/frontend/img/news-card-4.jpg" alt="Top 10 Spa And Hotels to Visit" /></a></div>
-                                                <div class="news-card__body">
-                                                    <div class="news-card__info"> <span class="news-card__category"> makeup </span><span class="news-card__date"> 16 jan 2021</span></div>
-                                                    <div class="news-card__title"> <a href="05_blog-post.html">Top 10 Spa And Hotels to Visit </a></div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-top"> </ul>

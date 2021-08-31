@@ -13,6 +13,7 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table('Blog')->insert([
             'title' => '15 Tips For A Perfect Makeup',
             'image' => 'https://pro-theme.com/html/viasun/assets/img/img-article-gallery-1.jpg',
@@ -92,6 +93,7 @@ class BlogSeeder extends Seeder
             'content' => 'Three things every ageing woman is looking for in a lipstick is non-drying, hydrating and a lipstick that doesn’t settle in lines. I think it’s fair to say that wearing lipstick that causes the lips to peel kinda defeats the purpose of lipstick at all! And what’s more, is that it doesn’t have to be that way. In fact, it shouldn’t! You can wear any colour or shade of lipstick without it affecting your lips negatively. Those with dry or ageing skin, especially older women over 50 have trouble with this the most. The good news is, we’re here to fix that for you! We’ve put together the best lipsticks for older women, say hello to perfect lips no matter your age or skin type!',
             'status' => 1,
             'created_at' => Carbon::now()->addDay(-1),
+
         ]);
     }
 }

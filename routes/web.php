@@ -37,7 +37,11 @@ Route::prefix('admin')->group(function (){
 
 Route::get('/home/01',[App\Http\Controllers\Front\shopController::class, 'home']);
 
+// file test để lấy dữ liệu mẫu
+//Route::get('/detail/{id}',[App\Http\Controllers\Front\shopController::class, 'detail']);
+
 Route::get('/shop',[App\Http\Controllers\Front\shopController::class, 'shop']);
+
 Route::get('/home/admin',[App\Http\Controllers\Front\shopController::class, 'home']);
 
 // ĐÂY LÀ LỚP CONTROLLER KO PHẢI QUA LỚP FRONT.ĐƯỜNG LINK
