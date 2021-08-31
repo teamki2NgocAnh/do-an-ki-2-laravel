@@ -18,46 +18,37 @@ class BlogSeeder extends Seeder
         DB::table('blogs')->insert([
             [
                 'user_id' => 3,
-                'title' => 'The Personality Trait That Makes People Happier',
-                'images' => 'blog-1.jpg',
+                'title' => '15 Tips For a Perfect Makup',
+                'images' => 'news-card-1.jpg',
+                'subTitle'=>'MAKEUP',
                 'category' => 'TRAVEL',
                 'content' => '',
             ],
             [
                 'user_id' => 3,
-                'title' => 'This was one of our first days in Hawaii last week.',
-                'images' => 'blog-2.jpg',
+                'title' => 'How to Maintain a Slim Body ',
+                'subTitle'=>'FITNESS',
+                'images' => 'news-card-2.jpg',
                 'category' => 'CODELEANON',
                 'content' => '',
             ],
             [
                 'user_id' => 3,
-                'title' => 'Last week I had my first work trip of the year to Sonoma Valley',
-                'images' => 'blog-3.jpg',
+                'title' => 'Attend Any Event With Full Spirit',
+                'subTitle'=>'HEALTH',
+                'images' => 'news-card-3.jpg',
                 'category' => 'TRAVEL',
                 'content' => '',
             ],
             [
                 'user_id' => 3,
-                'title' => 'Happppppy New Year! I know I am a little late on this post',
-                'images' => 'blog-4.jpg',
+                'title' => 'Top 10 Spa And Hotels to Visit ',
+                'subTitle'=>'MAKEUP',
+                'images' => 'news-card-4.jpg',
                 'category' => 'CODELEANON',
                 'content' => '',
             ],
-            [
-                'user_id' => 3,
-                'title' => 'Absolue collection. The Lancome team has been one…',
-                'images' => 'blog-5.jpg',
-                'category' => 'MODEL',
-                'content' => '',
-            ],
-            [
-                'user_id' => 3,
-                'title' => 'Writing has always been kind of therapeutic for me',
-                'images' => 'blog-6.jpg',
-                'category' => 'CODELEANON',
-                'content' => '',
-            ],
+
         ]);
     }
 }

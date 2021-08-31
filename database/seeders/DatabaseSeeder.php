@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
             ProductCategoriesSeeder::class,
             ProductCommentsSeeder::class,
             ProductDetailsSeeder::class,
-            ProductImagesSeeder::class,
             ProductSeeder::class,
             UserSeeder::class
         ]);
