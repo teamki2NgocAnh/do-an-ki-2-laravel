@@ -101,9 +101,9 @@
 
                                                 <div class="product-card__btns">
                                                     <ul>
-                                                        <li><a href="{{url("/detail", $cosmetic->id)}}"><span>Add to cart</span><i class="fas fa-shopping-basket"></i></a></li>
+                                                        <li><a href="{{url("/detail", $cosmetic->id)}}"><span>Add to cart</span><i class="fas fa-cart-plus"></i></a></li>
                                                         <li><a href="#"><span>zoom</span><i class="fas fa-search-plus"></i></a></li>
-                                                        <li><a href="#"><span>Add to wishlist</span><i class="fas fa-heart"></i></a></li>
+                                                        <li><a href="#"><span>Add to wishlist</span><i class="far fa-heart"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
