@@ -12,11 +12,10 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="format-detection" content="telephone=no">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <link rel="shortcut icon" href="public/frontend/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="public/frontend/css/libs.min.css">
-    <link rel="stylesheet" href="public/frontend/css/main.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+    <link rel="shortcut icon" href="/frontend/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/css/libs.min.css">
+    <link rel="stylesheet" href="/frontend/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="page-home">
@@ -26,7 +25,7 @@
 
 <header class="page-header">
     <div class="page-header__inner">
-        <div class="page-header__logo"><a class="logo" href="index.html"><img src="public/frontend/img/logo.png"
+        <div class="page-header__logo"><a class="logo" href="index.html"><img src="/frontend/img/logo.png"
                                                                               alt="Viasun"></a></div>
         <div class="page-header__menu">
             <nav class="page-nav" data-uk-navbar="">
@@ -61,7 +60,7 @@
         <div data-uk-grid>
             <div class="uk-width-2-5@m">
                 <div class="page-footer__logo"><a class="logo" href="home.blade.php"><img
-                            src="public/frontend/img/logo-big.png" alt="Viasun"></a></div>
+                            src="/frontend/img/logo-big.png" alt="Viasun"></a></div>
                 <div class="page-footer__menus">
                     <div class="uk-child-width-1-2" data-uk-grid>
                         <div>
@@ -103,12 +102,12 @@
                 </div>
                 <div class="page-footer__bottom">
                     <div class="copy">(c) 2021 — All rights reserved.</div>
-                    <div class="payments"><img src="public/frontend/img/payment-1.png" alt="payment"><img
-                            src="public/frontend/img/payment-2.png" alt="payment"><img
-                            src="public/frontend/img/payment-3.png" alt="payment"><img
-                            src="public/frontend/img/payment-4.png" alt="payment"><img
-                            src="public/frontend/img/payment-5.png" alt="payment"><img
-                            src="public/frontend/img/payment-6.png" alt="payment"></div>
+                    <div class="payments"><img src="/frontend/img/payment-1.png" alt="payment"><img
+                            src="/frontend/img/payment-2.png" alt="payment"><img
+                            src="/frontend/img/payment-3.png" alt="payment"><img
+                            src="/frontend/img/payment-4.png" alt="payment"><img
+                            src="/frontend/img/payment-5.png" alt="payment"><img
+                            src="/frontend/img/payment-6.png" alt="payment"></div>
                 </div>
             </div>
         </div>
@@ -118,7 +117,7 @@
             <button class="uk-offcanvas-close" type="button" data-uk-close=""></button>
             <div>
                 <div class="uk-margin uk-margin-remove-top"><a class="logo" href="home.blade.php"><img
-                            src="public/frontend/img/logo.png" alt="Viasun"></a></div>
+                            src="/frontend/img/logo.png" alt="Viasun"></a></div>
             </div>
             <div>
                 <div class="uk-margin">
@@ -171,8 +170,8 @@
     </div>
 </footer>
 
-<script src="public/frontend/js/libs.js"></script>
-<script src="public/frontend/js/main.js"></script>
+<script src="/frontend/js/libs.js"></script>
+<script src="/frontend/js/main.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
