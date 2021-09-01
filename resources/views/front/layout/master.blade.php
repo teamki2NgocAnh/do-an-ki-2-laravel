@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/frontend/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/frontend/css/libs.min.css">
     <link rel="stylesheet" href="/frontend/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/frontend/font awesome-css-icon/css-awosome/all.css">
 </head>
 
 <body class="page-home">
