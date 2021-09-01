@@ -6,7 +6,7 @@
 <script src="/libs/admin/vendor/nanoscroller/nanoscroller.js"></script>
 <script src="/libs/admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script src="/libs/admin/vendor/magnific-popup/magnific-popup.js"></script>
-<script src="/libs/admin/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="lib/admin/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 <!-- Specific Page Vendor -->
 <script src="/libs/admin/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
 <script src="/libs/admin/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>

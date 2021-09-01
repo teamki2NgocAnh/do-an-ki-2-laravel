@@ -29,6 +29,6 @@
     <link rel="stylesheet" href="/libs/admin/stylesheets/theme-custom.css">
     @yield('custom_style')
 
-    <!-- Head Libs -->
+    <!-- Head /libs -->
     <script src="/libs/admin/vendor/modernizr/modernizr.js"></script>
 </head>
