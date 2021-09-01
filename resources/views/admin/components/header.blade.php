@@ -22,8 +22,8 @@
         <div id="userbox" class="userbox">
             <a href="#" data-toggle="dropdown">
                 <figure class="profile-picture">
-                    <img src="/libs/admin/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle"
-                         data-lock-picture="/libs/admin/images/!logged-user.jpg"/>
+                    <img src="public/libs/admin/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle"
+                         data-lock-picture="public/libs/admin/images/!logged-user.jpg"/>
                 </figure>
                 <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
                     <span class="name">John Doe Junior</span>
