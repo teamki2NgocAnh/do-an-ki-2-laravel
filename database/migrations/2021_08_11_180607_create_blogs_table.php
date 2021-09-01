@@ -18,8 +18,8 @@ class CreateBlogsTable extends Migration
 
             $table->integer('user_id')->unsigned();
             $table->text('title');
-            $table->text('images');
             $table->text('category');
+            $table->text('images');
             $table->text('content');
             $table->integer('status');
             $table->timestamps();

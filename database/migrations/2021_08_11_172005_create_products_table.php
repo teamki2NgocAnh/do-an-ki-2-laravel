@@ -13,12 +13,13 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        // đưa phần productImages để lấy hết ảnh đưa vào mục product
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-
             $table->integer('brand_id')->unsigned();
             $table->integer('product_category_id')->unsigned();
             $table->string('name');
+            $table->text('path');
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->double('price');
