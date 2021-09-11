@@ -4,41 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasFactory;
-
-    protected $table = 'products';
-    protected $primaryKey = 'id';
-    protected $guarded = [];
-
+    use HasFactory,SoftDeletes;
+    protected $fillable = [
+        'name',
+        'description',
+        'discount',
+        'category_id',
+        'brand_id',
+        'slug',
+        'price',
+        'content_detail',
+        'thumbnail',
+        'images',
+    ];
+    public function product_option(){
+        return $this->hasMany(Product_option::class);
+    }
     public function brand(){
-        return $this->belongsTo(Brand::class,'brand_id','id');
-
+        return $this->belongsTo(Brand::class,'brand_id');
     }
-
-    public function productCategory(){
-        return $this->belongsTo(ProductCategory::class,'product_category_id','id');
-
-    }
-
-
-
-    public function productDetail(){
-        return $this->hasMany(ProductDetail::class,'product_id','id');
-
-    }
-
-    public function productComments(){
-        return $this->hasMany(ProductComment::class,'product_id','id');
-
-    }
-
-
-    public function orderDetails(){
-        return $this->hasMany(OrderDetails::class,'product_id','id');
-
-    }
-
 }

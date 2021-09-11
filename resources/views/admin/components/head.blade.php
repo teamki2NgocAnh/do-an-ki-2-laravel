@@ -2,6 +2,8 @@
 
     <!-- Basic -->
     <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
 
     <title>@yield('title')</title>
     <meta name="keywords" content="HTML5 Admin Template"/>
@@ -29,6 +31,11 @@
     <link rel="stylesheet" href="/libs/admin/stylesheets/theme-custom.css">
     @yield('custom_style')
 
-    <!-- Head /libs -->
+
+    <!-- Head Libs -->
     <script src="/libs/admin/vendor/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="/libs/admin/vendor/summernote/summernote.css" />
+    <link rel="stylesheet" href="/libs/admin/vendor/summernote/summernote-bs3.css" />
+
+
 </head>

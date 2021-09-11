@@ -16,12 +16,12 @@
                     <ul class="nav nav-children">
                         <li>
                             <a href="{{route('list_user')}}">
-                               Xem tất cả
+                                Xem tất cả
                             </a>
                         </li>
                         <li>
-                            <a href="pages-signin.html">
-                               Thêm mới
+                            <a href="{{route('create_user')}}">
+                                Thêm mới
                             </a>
                         </li>
                     </ul>
@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="pages-signin.html">
+                            <a href="{{route('create_product')}}">
                                 Thêm mới
                             </a>
                         </li>
@@ -55,11 +55,6 @@
                                 Xem tất cả
                             </a>
                         </li>
-                        <li>
-                            <a href="pages-signin.html">
-                                Thêm mới
-                            </a>
-                        </li>
                     </ul>
                 </li>
                 <li class="nav-parent">
@@ -74,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{route('create_category')}}">
                                 Thêm mới
                             </a>
                         </li>
@@ -82,17 +77,17 @@
                 </li>
                 <li class="nav-parent">
                     <a>
-                        <i class="fa fa-code-fork" aria-hidden="true"></i>
-                        <span>Danh mục con</span>
+                        <i class="fa fa-road" aria-hidden="true"></i>
+                        <span>Hãng</span>
                     </a>
                     <ul class="nav nav-children">
                         <li>
-                            <a href="{{route('list_subcategory')}}">
+                            <a href="{{route('list_brand')}}">
                                 Xem tất cả
                             </a>
                         </li>
                         <li>
-                            <a href="pages-signin.html">
+                            <a href="{{route('create_brand')}}">
                                 Thêm mới
                             </a>
                         </li>
@@ -110,30 +105,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="pages-signin.html">
+                            <a href="{{route('create_color')}}">
                                 Thêm mới
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-parent">
-                    <a>
-                        <i class="fa fa-ge" aria-hidden="true"></i>
-                        <span>Cấu hình</span>
-                    </a>
-                    <ul class="nav nav-children">
-                        <li>
-                            <a href="{{route('list_configuration')}}">
-                                Xem tất cả
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-signin.html">
-                                Thêm mới
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+
                 <li class="nav-parent">
                     <a>
                         <i class="fa fa-share-square-o" aria-hidden="true"></i>
@@ -145,16 +123,11 @@
                                 Xem tất cả
                             </a>
                         </li>
-                        <li>
-                            <a href="pages-signin.html">
-                                Thêm mới
-                            </a>
-                        </li>
                     </ul>
                 </li>
                 <li class="nav-parent">
                     <a>
-                        <i class="fa fa-info    " aria-hidden="true"></i>
+                        <i class="fa fa-info" aria-hidden="true"></i>
                         <span>Chi tiết đơn hàng</span>
                     </a>
                     <ul class="nav nav-children">
@@ -163,8 +136,21 @@
                                 Xem tất cả
                             </a>
                         </li>
+                    </ul>
+                </li>
+                <li class="nav-parent">
+                    <a>
+                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                        <span>Banner</span>
+                    </a>
+                    <ul class="nav nav-children">
                         <li>
-                            <a href="pages-signin.html">
+                            <a href="{{route('list_banner')}}">
+                                Xem tất cả
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('create_banner')}}">
                                 Thêm mới
                             </a>
                         </li>
@@ -179,11 +165,6 @@
                         <li>
                             <a href="{{route('list_contact')}}">
                                 Xem tất cả
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-signin.html">
-                                Thêm mới
                             </a>
                         </li>
                     </ul>

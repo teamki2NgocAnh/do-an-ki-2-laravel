@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\Sort;
 use App\Http\Controllers\Controller;
+use App\Models\Categories;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,14 @@ class ContactController extends Controller
         if ($sort && $sort == Sort::SORT_NAME_DESC) {
             $query_builder->orderBy('name', 'DESC')->get();
         }
-        $contacts = $query_builder->paginate(10);
-        return view('admin.contacts.table', ['list' => $contacts,'key_search'=>$search,'sort'=>$sort]);
+        if ($request->status){
+            $query_builder->where('status',$request->status);
+        }
+        $contacts = $query_builder->orderBy('id','DESC')->paginate(10);
+        return view('admin.contacts.table', ['list' => $contacts,'key_search'=>$search,'sort'=>$sort,'status'=>$request->status]);
+    }
+    public function destroy($id){
+        Contact::find($id)->delete();
+        return back();
     }
 }

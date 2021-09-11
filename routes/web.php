@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Service\ImageUploadController;
+use App\Http\Middleware\CheckIsAdmin;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -14,37 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-//    return view('welcome');
-
-    // kiểm tra file thông tin file seeder
-
-// return \App\Models\User::all();
-
-// return \App\Models\Product::all();
-
-//    return \App\Models\Brand::find(2)->products;
-
-//    return \App\Models\Product::find(1)->brand;
-    return \App\Models\Product::find(1)->productImages;
-
-});
-
-Route::prefix('admin')->group(function (){
+//Route::prefix('admin')->group(function (){
+Route::prefix('admin')->middleware(['auth',CheckIsAdmin::class])->group(function (){
     require_once __DIR__ . '/admin.php';
 });
+Route::get('admin/user/login', [UserController::class, 'login'])->name('admin_login');
+Route::post('admin/user/login', [UserController::class, 'process_login'])->name('admin_process_login');
 
 
-Route::get('/home/01',[App\Http\Controllers\Front\shopController::class, 'home']);
 
-// file test để lấy dữ liệu mẫu
-//Route::get('/detail/{id}',[App\Http\Controllers\Front\shopController::class, 'detail']);
+Route::post('/image/upload',[ImageUploadController::class,'upload'])->name('upload_image');
+Route::post('/image/uploads',[ImageUploadController::class,'uploads'])->name('upload_images');
 
-Route::get('/shop',[App\Http\Controllers\Front\shopController::class, 'shop']);
 
-Route::get('/home/admin',[App\Http\Controllers\Front\shopController::class, 'home']);
-
-// ĐÂY LÀ LỚP CONTROLLER KO PHẢI QUA LỚP FRONT.ĐƯỜNG LINK
-Route::get('/home',[App\Http\Controllers\Controller::class, 'home']);
+Route::get('/',[Controller::class,'home'])->name('home_page');
+Route::get('/product',[Controller::class,'product'])->name('product');
+Route::get('/product/{slug}',[Controller::class,'product_detail'])->name('product_detail');
 
 

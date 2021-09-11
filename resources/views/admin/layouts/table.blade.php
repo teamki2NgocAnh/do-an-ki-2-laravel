@@ -13,13 +13,15 @@
     <section class="panel">
 
         <header class="panel-heading">
-            <h2 class="panel-title">@yield('title_table')</h2>
+            <h2 class="panel-title">@yield('title_table') <a href="#" id="addToTable" style="float: right;transform: translateY(-5px)" class="btn btn-primary">Add <i class="fa fa-plus"></i></a></h2>
         </header>
         <div class="panel-body">
             <div class="row table_header">
                 <div class="col-md-4 col-sm-4">
                     <div class="mb-md">
-                        <button id="addToTable" class="btn btn-primary">Add <i class="fa fa-plus"></i></button>
+                        <form action="" method="get" class="form_filter2">
+                            @yield('option_filter')
+                        </form>
                     </div>
                 </div>
                 <div class=" container_filter col-md-8 col-sm-8">
@@ -70,11 +72,25 @@
         $('.sorted').change(function (){
             $('.form_filter').submit()
         })
+        $('.sorted2').change(function (){
+            $('.form_filter2').submit()
+        })
+
         $('.btn_show_video').click(function (){
             $('.show_video').attr('src',this.slot)
         })
         $('.close_video').click(function (){
             $('.show_video').attr('src','')
         })
+        function changeStatus(id){
+            var perPage = window.location.href.split("/")[4];
+            var page = perPage.split('?')[0]
+            var protocol = window.location.protocol
+            var host = window.location.hostname
+            var port = window.location.port
+            var url = protocol+'//'+host+':'+port
+            $.get(`${url}/admin/${page}/update-status/${id}`, function(data){});
+        }
     </script>
+    @yield('Extra_JS')
 @endsection
